@@ -12,7 +12,7 @@ class My_Handler(BaseHTTPServer.BaseHTTPRequestHandler):
         print 'got GET request to path: %s' % self.path
 
         self.send_response(200)
-        self.send_header('Content-type', 'text/plain')
+        self.send_header('Content-type', 'text/json')
         self.end_headers()
 
         pods = kube_api.get_pods()
